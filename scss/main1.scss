@@ -1,44 +1,18 @@
-@import "seetings/fonts-colors-icons";
-@import "seetings/mixins";
-@import "structure/menu-logo-HEADER";
-@import "structure/statistics";
-@import "structure/opening";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
 @import "generic/reset";
-@import "structure/buttons";
 
+@import "settings";
 
-* {
-  box-sizing: border-box;
-}
+@import "elements/base";
+@import "elements/buttons";
+@import "elements/header";
+@import "elements/opening";
+@import "elements/statistics";
+@import "elements/benefits";
+@import "elements/pricing";
+@import "elements/contact";
+@import "elements/form";
+@import "elements/footer";
 
-body {
-  font-family: $font1;
-}
-
-a {
-  text-decoration: none;
-}
-
-h2 {
-  font-family: $font2;
-  font-size: 2.25rem;
-}
-
-.container {
-  width: 1352px;
-  margin: 0 auto;
-
-  @include notebook {
-    width: 100%;
-    padding: 0 15px;
-  }
-}
-
-
-.logo {
-  font-family: $font2;
-  font-size: 3rem;
-  font-weight: 400;
-  color: $primaryColor;
-}
-$button-radius: 35px;

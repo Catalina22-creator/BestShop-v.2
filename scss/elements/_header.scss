@@ -1,6 +1,4 @@
-@import "../seetings/fonts-colors-icons";
-@import "../seetings/mixins";
-
+@import "../settings";
 
 .header {
   height: 70px;
@@ -15,7 +13,7 @@
 
   .nav {
     &__element {
-      padding: 0 26px;
+      padding: 3px 22px;
 
       &:last-child {
         padding-right: 0;
@@ -23,21 +21,20 @@
     }
 
     &__link {
-      color: $primaryColor;
+      color: $ColorGrey;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      padding: 28px 18px 22px;
-      border-bottom: 4px solid transparent;
+      padding: 20px 13px 20px;
+      border-bottom: 2px solid transparent;
       letter-spacing: 0.1875rem;
 
       &:hover {
-        color: $Background;
-        border-color: $Border1;
-       @include  tablet {
-         letter-spacing: 0;
-         margin: 60%;
-       }
+        color: $Primary;
+        font-optical-sizing: auto;
+        border-bottom: $ColorShadow 4px solid;
+
+
         @include mobile {
           border-color: transparent;
           font-size: 110%;
@@ -53,7 +50,7 @@
     @include mobile {
       position: absolute;
       left: 0;
-      top: 72px;
+      top: 95px;
       flex-direction: column;
       background-color: white;
       width: 100%;
@@ -88,20 +85,19 @@
           ~ .menu__toggle {
             span {
               &:nth-child(1) {
-                transform: rotate(0deg) translate(3px, -5px);
+                transform: rotate(180deg) translate(3px, 5px);
               }
-
               &:nth-child(2) {
-                transform: rotate(0deg) translate(3px, 0px);
+                opacity: 0;
               }
-
               &:nth-child(3) {
-                transform: rotate(0deg) translate(3px, 5px);
+                transform: rotate(-180deg) translate(3px, -5px);
               }
+            }
           }
         }
       }
-    }}
+    }
 
     &__toggle {
       display: none;
@@ -111,18 +107,18 @@
         height: 2px;
         display: block;
         margin-bottom: 3px;
-        background-color: $MenuColor;
-        transition: .2s all linear;
+        background-color: $Primary;
+        transition: .4s all ease; //revert// //easy in//
 
         &:last-child {
           margin-bottom: 0;
         }
       }
-        @include mobile {
-          display: block;
-        }
+
+      @include mobile {
+        display: block;
       }
     }
   }
-
+}
 
